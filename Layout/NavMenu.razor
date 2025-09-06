@@ -1,0 +1,44 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Victor Toledo</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Perfil" Match="NavLinkMatch.All">
+                <span class=" bi bi-person h3" aria-hidden="true"></span> Perfil
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Formacao">
+                <span class="bi bi-book h4" aria-hidden="true"></span> Formacao       
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Certificados">
+                <span class="bi bi-patch-check h4" aria-hidden="true"></span> Certificados
+            </NavLink>
+        </div>
+        <div class="nav-item px-4">
+            <NavLink class="nav-link" href="Skills">
+                <span class="bi bi- h4" aria-hidden="true"></span> Skills
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
