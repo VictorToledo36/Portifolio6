@@ -2,6 +2,77 @@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Victor Toledo</h1>
+<hr />
 
-Welcome to your new app.
+<div class="info-card">
+    <a href="https://www.google.com/maps/search/?api=1&query=Hortolandia"
+       target="_blank" class="info-item">
+        <span class="icon">📍</span>
+        <span>@Endereco</span>
+    </a>
+
+    <a href="https://wa.me/5519991443858" target="_blank" class="info-item">
+        <span class="icon">💬</span>
+        <span>@telefone</span>
+    </a>
+
+    <a href="mailto:@Email" class="info-item">
+        <span class="icon">✉️</span>
+        <span>@Email</span>
+    </a>
+</div>
+
+<hr />
+
+<h4>Resumo Profissional</h4>
+<p style="white-space: pre-line;">
+    @ResumoProfissional
+</p>
+
+
+@code {
+    private string Endereco = "Hortolândia";
+    private string Email = "victor.toledo36@hotmail.com";
+    private string telefone = "(19) 99144-3858";
+    private string ResumoProfissional = @"
+Tenho 26 anos e sou formado em Análise e Desenvolvimento de Sistemas pela Faculdade Estácio.
+
+Atualmente, atuo como Desenvolvedor na Areco, com foco principal em back-end para ERP Desktop utilizando Delphi. Nessa função, sou responsável por implementações de regras de negócio, otimização de performance e integração com sistemas complementares.
+
+Além do ERP, também colaboro no desenvolvimento de aplicações mobile em Flutter, atuando em melhorias contínuas, correções de inconsistências e integração com APIs e serviços de back-end.
+
+Minha especialidade é o desenvolvimento back-end, com forte domínio em Delphi, SQL e bancos de dados relacionais. Tenho facilidade em projetar soluções eficientes, seguras e de alta performance, além de estudar continuamente linguagens como C# para expandir meu repertório técnico.
+
+Sou um profissional movido por desafios, que valoriza a qualidade de código, boas práticas e aprendizado contínuo. Busco constantemente aprimorar minhas habilidades técnicas e contribuir para o crescimento das equipes e projetos em que atuo, entregando soluções eficientes e de impacto.
+";
+}
+
+<style>
+    .info-card {
+        display: flex;
+        gap: 20px;
+        padding: 10px 0;
+        align-items: center;
+        flex-wrap: wrap; 
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        transition: 0.2s;
+    }
+
+        .info-item:hover {
+            color: #007bff;
+            transform: scale(1.05);
+        }
+
+    .icon {
+        font-size: 20px;
+    }
+</style>
