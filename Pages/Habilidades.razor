@@ -1,0 +1,148 @@
+﻿@page "/Habilidades"
+
+<h3>Habilidades</h3>
+
+<div class="skills-grid">
+
+    <!-- Back-End -->
+    <div class="skills-category">
+        <h4>Back-End</h4>
+        <div class="skill-card">
+            <img src="img/iconsDelphi.png" class="skill-icon" />
+            <div>
+                <h6>Delphi</h6>
+                <p>Foco em ERP Desktop, implementando regras de negócio, integrações e otimização de performance.</p>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="img/iconsCSharp.png" class="skill-icon" />
+            <div>
+                <h6>C#</h6>
+                <p>Desenvolvimento back-end moderno e criação de APIs REST.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Front-End -->
+    <div class="skills-category">
+        <h4>Front-End</h4>
+        <div class="skill-card">
+            <img src="img/iconsBlazor.png" class="skill-icon" />
+            <div>
+                <h6>Blazor</h6>
+                <p>Interfaces web integradas ao back-end, garantindo escalabilidade e integração entre sistemas.</p>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="img/iconsFlutter.png" class="skill-icon" />
+            <div>
+                <h6>Flutter</h6>
+                <p>Apps mobile, manutenção, melhorias e integração com APIs back-end.</p>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-html5 skill-icon" style="color: #E44D26"></i>
+            <div>
+                <h6>HTML</h6>
+                <p>Criação de estruturas básicas de páginas web.</p>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-css3-alt skill-icon" style="color: #1572B6"></i>
+            <div>
+                <h6>CSS</h6>
+                <p>Estilização de páginas web, layout e responsividade básica.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dados -->
+    <div class="skills-category">
+        <h4>Dados</h4>
+        <div class="skill-card">
+            <i class="fas fa-database skill-icon" style="color: #11408A"></i>
+            <div>
+                <h6>SQL</h6>
+                <p>Consultas complexas, procedures e modelagem de banco de dados relacionais.</p>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <i class="fas fa-database skill-icon" style="color: #00618A"></i>
+            <div>
+                <h6>MySQL</h6>
+                <p>Criação e manutenção de bancos de dados, queries e integrações básicas.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Automação -->
+    <div class="skills-category">
+        <h4>Automação</h4>
+        <div class="skill-card">
+            <i class="fab fa-git-alt skill-icon" style="color: #F4511E"></i>
+            <div>
+                <h6>Git</h6>
+                <p>Controle de versão, branching, code review e integração em pipelines CI/CD.</p>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-docker skill-icon" style="color: #03A9F4"></i>
+            <div>
+                <h6>Docker</h6>
+                <p>Containers para padronização de ambientes e automação de deploys.</p>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="img/iconsJenkinsFile.png" class="skill-icon" />
+            <div>
+                <h6>Jenkins</h6>
+                <p>Automação básica de builds e pipelines CI/CD.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem 1rem; 
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .skills-category h4 {
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .skill-card {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        background-color: #fff;
+        margin-bottom: 1rem; 
+    }
+
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 1rem;
+        font-size: 2rem;
+    }
+</style>
+
+@code {
+
+}
