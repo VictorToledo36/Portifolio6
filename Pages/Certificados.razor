@@ -1,9 +1,104 @@
 ﻿@page "/Certificados"
+@inject HttpClient Http
 
+<h3 style="margin-bottom:1rem;">Certificados</h3>
 
-<h3>Certificados</h3>
+<!-- Filtros fixos horizontalmente -->
+<div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem;">
+    @foreach (var cat in Categorias)
+    {
+        <button class="btn-filtro @(CategoriaSelecionada == cat ? "ativo" : "")"
+                style="padding:0.5rem 1rem; border-radius:8px; border:none; cursor:pointer;
+                       background:@(CategoriaSelecionada == cat ? "#6c5ce7" : "#dfe6e9");
+                       color:@(CategoriaSelecionada == cat ? "white" : "black");
+                       font-weight:bold; transition:0.2s;"
+                @onclick="() => FiltrarCategoria(cat)">
+            @cat
+        </button>
+    }
+</div>
 
+@if (CertificadosFiltrados.Count == 0)
+{
+    <p>Nenhum certificado encontrado.</p>
+}
+else
+{
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap:2rem;">
+        @foreach (var cert in CertificadosFiltrados)
+        {
+            <div class="certificado-card"
+                 style="border:1px solid #ccc; border-radius:8px; padding:0.5rem; cursor:pointer; transition:0.2s;"
+                 @onclick="() => MostrarPDF(cert.Url)">
+
+                <iframe src="@cert.Url" style="width:100%; height:180px; border:none; border-radius:6px;"></iframe>
+
+                <div style="padding:0.5rem 0;">
+                    <strong>@cert.Nome</strong>
+                    <p style="margin:0.25rem 0 0; font-size:0.9rem; color:#666;">@cert.Categoria</p>
+                </div>
+            </div>
+        }
+    </div>
+}
+@if (!string.IsNullOrEmpty(PDFSelecionado))
+{
+    <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:flex; justify-content:center; align-items:center; z-index:1000;">
+        <div style="background:white; padding:1rem; width:80%; height:80%; position:relative; border-radius:8px;">
+            <button style="position:absolute; top:0.5rem; right:0.5rem; font-weight:bold; cursor:pointer;" @onclick="FecharPDF">Fechar</button>
+            <iframe src="@PDFSelecionado" style="width:100%; height:100%; border:none;"></iframe>
+        </div>
+    </div>
+}
 
 @code {
+    private const string CategoriaPadrao = "All";
 
+    private List<Certificado> ListaCertificados = new();
+    private List<string> Categorias => new List<string> { "All", "Web", "Dados", "BackEnd" };
+
+    private List<Certificado> CertificadosFiltrados =>
+        CategoriaSelecionada == CategoriaPadrao
+            ? ListaCertificados
+            : ListaCertificados.Where(c => c.Categoria == CategoriaSelecionada).ToList();
+
+    private string CategoriaSelecionada = CategoriaPadrao;
+    private string? PDFSelecionado;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            ListaCertificados = await Http.GetFromJsonAsync<List<Certificado>>("certificados.json") ?? new List<Certificado>();
+        }
+        catch
+        {
+            ListaCertificados = new List<Certificado>();
+        }
+    }
+
+    private void FiltrarCategoria(string categoria)
+    {
+        CategoriaSelecionada = categoria;
+    }
+
+    private void MostrarPDF(string? url)
+    {
+        if (!string.IsNullOrEmpty(url))
+        {
+            PDFSelecionado = url;
+        }
+    }
+
+    private void FecharPDF()
+    {
+        PDFSelecionado = null;
+    }
+
+    public class Certificado
+    {
+        public string? Nome { get; set; }
+        public string? Url { get; set; }
+        public string? Categoria { get; set; }
+    }
 }
