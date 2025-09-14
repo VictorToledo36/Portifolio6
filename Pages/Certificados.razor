@@ -69,7 +69,8 @@ else
     {
         try
         {
-            ListaCertificados = await Http.GetFromJsonAsync<List<Certificado>>("certificados.json") ?? new List<Certificado>();
+            ListaCertificados = await Http.GetFromJsonAsync<List<Certificado>>("https://localhost:7020/api/certificados")
+                      ?? new List<Certificado>();
         }
         catch
         {
