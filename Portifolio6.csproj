@@ -25,4 +25,15 @@
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
 
+	<!-- Garante que todo o conteúdo do wwwroot seja publicado -->
+	<ItemGroup>
+		<Content Include="wwwroot\**" CopyToPublishDirectory="PreserveNewest" />
+	</ItemGroup>
+
+	<!-- Copia o index.html para a raiz da pasta publish (necessário para GitHub Pages) -->
+	<Target Name="MoveIndexToRoot" AfterTargets="Publish">
+		<Copy SourceFiles="$(ProjectDir)wwwroot\index.html" DestinationFolder="$(PublishDir)" />
+	</Target>
 </Project>
+
+
