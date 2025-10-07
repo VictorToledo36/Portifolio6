@@ -10,7 +10,7 @@ git checkout gh-pages
 
 # Copia os arquivos compilados
 # Remove arquivos antigos
-Get-ChildItem -Path . -Exclude ".git" | Remove-Item -Recurse -Force
+Get-ChildItem -Path . -Exclude ".git", ".vs" | Remove-Item -Recurse -Force
 
 # Copia arquivos do publish
 Copy-Item -Path "$PublishFolder\*" -Destination "." -Recurse
