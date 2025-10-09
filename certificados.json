@@ -1,0 +1,17 @@
+[
+  {
+    "Nome": "FundamentoBlazor",
+    "Categoria": "Web",
+    "Url": "certificados/Web/FundamentoBlazor.pdf"
+  },
+  {
+    "Nome": "BancosDadosPostgresql",
+    "Categoria": "Dados",
+    "Url": "certificados/Dados/BancosDadosPostgresql.pdf"
+  },
+  {
+    "Nome": "FundamentosCSharp",
+    "Categoria": "BackEnd",
+    "Url": "certificados/BackEnd/FundamentosCSharp.pdf"
+  }
+]
