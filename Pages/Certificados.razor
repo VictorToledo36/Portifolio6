@@ -1,5 +1,6 @@
 ﻿@page "/Certificados"
 @inject HttpClient Http
+@inject IJSRuntime JSRuntime
 
 <h3 style="margin-bottom:1rem;">Certificados</h3>
 
@@ -28,25 +29,57 @@ else
         @foreach (var cert in CertificadosFiltrados)
         {
             <div class="certificado-card"
-                 style="border:1px solid #ccc; border-radius:8px; padding:0.5rem; cursor:pointer; transition:0.2s;"
-                 @onclick="() => MostrarPDF(cert.Url)">
+                 style="border:1px solid #ddd; border-radius:12px; padding:1.5rem; cursor:pointer; transition:all 0.3s; 
+                        background:@GetCorCategoria(cert.Categoria); color:white; box-shadow:0 4px 15px rgba(0,0,0,0.1);
+                        transform:scale(1); hover:transform:scale(1.02);"
+                 @onclick="() => MostrarDetalhes(cert)"
 
-                <iframe src="@cert.Url" style="width:100%; height:180px; border:none; border-radius:6px;"></iframe>
-
-                <div style="padding:0.5rem 0;">
-                    <strong>@cert.Nome</strong>
-                    <p style="margin:0.25rem 0 0; font-size:0.9rem; color:#666;">@cert.Categoria</p>
+                <div style="text-align:center;">
+                    <div style="font-size:3rem; margin-bottom:1rem;">
+                        @GetIconeCategoria(cert.Categoria)
+                    </div>
+                    <h4 style="margin:0 0 0.5rem 0; font-weight:bold;">@cert.Nome</h4>
+                    <p style="margin:0; opacity:0.9; font-size:0.9rem;">@cert.Categoria</p>
+                    <div style="margin-top:1rem; padding:0.5rem; background:rgba(255,255,255,0.2); border-radius:6px;">
+                        <small>📅 @cert.DataConclusao</small>
+                    </div>
                 </div>
             </div>
         }
     </div>
 }
-@if (!string.IsNullOrEmpty(PDFSelecionado))
+@if (CertificadoSelecionado != null)
 {
     <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:flex; justify-content:center; align-items:center; z-index:1000;">
-        <div style="background:white; padding:1rem; width:80%; height:80%; position:relative; border-radius:8px;">
-            <button style="position:absolute; top:0.5rem; right:0.5rem; font-weight:bold; cursor:pointer;" @onclick="FecharPDF">Fechar</button>
-            <iframe src="@PDFSelecionado" style="width:100%; height:100%; border:none;"></iframe>
+        <div style="background:white; padding:2rem; max-width:500px; width:90%; position:relative; border-radius:12px; text-align:center;">
+            <button style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer;" @onclick="FecharDetalhes">×</button>
+            
+            <div style="font-size:4rem; margin-bottom:1rem;">
+                @GetIconeCategoria(CertificadoSelecionado.Categoria)
+            </div>
+            
+            <h3 style="margin:0 0 1rem 0; color:#333;">@CertificadoSelecionado.Nome</h3>
+            <p style="margin:0 0 1rem 0; color:#666;">Categoria: @CertificadoSelecionado.Categoria</p>
+            <p style="margin:0 0 1.5rem 0; color:#666;">Data de Conclusão: @CertificadoSelecionado.DataConclusao</p>
+            
+            @if (!string.IsNullOrEmpty(CertificadoSelecionado.Descricao))
+            {
+                <p style="margin:0 0 1.5rem 0; color:#555; line-height:1.5;">@CertificadoSelecionado.Descricao</p>
+            }
+            
+            <div style="display:flex; gap:1rem; justify-content:center;">
+                @if (!string.IsNullOrEmpty(CertificadoSelecionado.Url))
+                {
+                    <button @onclick="async () => await AbrirPDF(CertificadoSelecionado.Url)" 
+                            style="padding:0.75rem 1.5rem; background:#667eea; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer;">
+                        📄 Ver PDF
+                    </button>
+                }
+                <button @onclick="FecharDetalhes" 
+                        style="padding:0.75rem 1.5rem; background:#6c757d; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer;">
+                    Fechar
+                </button>
+            </div>
         </div>
     </div>
 }
@@ -63,7 +96,7 @@ else
             : ListaCertificados.Where(c => c.Categoria == CategoriaSelecionada).ToList();
 
     private string CategoriaSelecionada = CategoriaPadrao;
-    private string? PDFSelecionado;
+    private Certificado? CertificadoSelecionado;
 
     protected override async Task OnInitializedAsync()
     {
@@ -83,23 +116,63 @@ else
         CategoriaSelecionada = categoria;
     }
 
-    private void MostrarPDF(string? url)
+    private void MostrarDetalhes(Certificado certificado)
     {
-        if (!string.IsNullOrEmpty(url))
-        {
-            PDFSelecionado = url;
-        }
+        CertificadoSelecionado = certificado;
     }
 
-    private void FecharPDF()
+    private void FecharDetalhes()
     {
-        PDFSelecionado = null;
+        CertificadoSelecionado = null;
     }
+
+    private async Task AbrirPDF(string url)
+    {
+        // Abre o PDF em uma nova aba
+        await JSRuntime.InvokeVoidAsync("open", url, "_blank");
+    }
+
+    private string GetIconeCategoria(string? categoria)
+    {
+        return categoria switch
+        {
+            "Web" => "🌐",
+            "Dados" => "📊",
+            "BackEnd" => "⚙️",
+            _ => "📜"
+        };
+    }
+
+    private string GetCorCategoria(string? categoria)
+    {
+        return categoria switch
+        {
+            "Web" => "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            "Dados" => "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+            "BackEnd" => "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+            _ => "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+        };
+    }
+
+    private string GetCorCategoria(string? categoria)
+    {
+        return categoria switch
+        {
+            "Web" => "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            "Dados" => "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+            "BackEnd" => "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+            _ => "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+        };
+    }
+
+
 
     public class Certificado
     {
         public string? Nome { get; set; }
         public string? Url { get; set; }
         public string? Categoria { get; set; }
+        public string? DataConclusao { get; set; }
+        public string? Descricao { get; set; }
     }
 }

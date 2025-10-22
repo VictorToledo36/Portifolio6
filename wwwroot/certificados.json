@@ -1,17 +1,72 @@
 [
   {
-    "Nome": "FundamentoBlazor",
+    "Nome": "Fundamentos do Blazor",
     "Categoria": "Web",
-    "Url": "certificados/Web/FundamentoBlazor.pdf"
+    "DataConclusao": "2024-03-15",
+    "Descricao": "Curso completo sobre desenvolvimento de aplicações web com Blazor WebAssembly e Server-Side.",
+    "Url": "certificados/Web/Fundamentos do Blazor.pdf"
   },
   {
-    "Nome": "BancosDadosPostgresql",
+    "Nome": "C# Completo - Programação Orientada a Objetos",
+    "Categoria": "BackEnd",
+    "DataConclusao": "2024-01-10",
+    "Descricao": "Curso completo de C# com foco em programação orientada a objetos e desenvolvimento de projetos práticos.",
+    "Url": "certificados/BackEnd/C# Completo - Prog Orientada a Objetos - Projetos.pdf"
+  },
+  {
+    "Nome": "Desenvolvedor .NET",
+    "Categoria": "BackEnd",
+    "DataConclusao": "2024-02-15",
+    "Descricao": "Formação completa para desenvolvedor .NET com as melhores práticas e tecnologias atuais.",
+    "Url": "certificados/BackEnd/Desenvolvedor.Net.pdf"
+  },
+  {
+    "Nome": "Fundamentos C#",
+    "Categoria": "BackEnd",
+    "DataConclusao": "2023-12-20",
+    "Descricao": "Curso introdutório de C# cobrindo sintaxe básica, tipos de dados e estruturas de controle.",
+    "Url": "certificados/BackEnd/Fundamentos CSharp.pdf"
+  },
+  {
+    "Nome": "Fundamentos de API em ASP.NET",
+    "Categoria": "BackEnd",
+    "DataConclusao": "2024-03-05",
+    "Descricao": "Desenvolvimento de APIs RESTful com ASP.NET, incluindo autenticação e documentação.",
+    "Url": "certificados/BackEnd/Fundamentos de API em AspNet.pdf"
+  },
+  {
+    "Nome": "Fundamentos do ASP.NET MVC",
+    "Categoria": "BackEnd",
+    "DataConclusao": "2024-02-28",
+    "Descricao": "Curso completo de ASP.NET MVC para desenvolvimento de aplicações web robustas.",
+    "Url": "certificados/BackEnd/Fundamentos do Asp.Net MVC.pdf"
+  },
+  {
+    "Nome": "Iniciando com ASP.NET Core",
+    "Categoria": "BackEnd",
+    "DataConclusao": "2024-01-25",
+    "Descricao": "Introdução ao ASP.NET Core para desenvolvimento de aplicações modernas e escaláveis.",
+    "Url": "certificados/BackEnd/Iniciando com Asp.NEt Core.pdf"
+  },
+  {
+    "Nome": "Introdução Entity Framework Core",
+    "Categoria": "BackEnd",
+    "DataConclusao": "2024-04-10",
+    "Descricao": "ORM Entity Framework Core para acesso a dados eficiente e produtivo.",
+    "Url": "certificados/BackEnd/Introdução Entity Framework Core.pdf"
+  },
+  {
+    "Nome": "Bancos de Dados PostgreSQL",
     "Categoria": "Dados",
+    "DataConclusao": "2024-02-20",
+    "Descricao": "Curso avançado de PostgreSQL incluindo modelagem, otimização e administração de banco de dados.",
     "Url": "certificados/Dados/BancosDadosPostgresql.pdf"
   },
   {
-    "Nome": "FundamentosCSharp",
-    "Categoria": "BackEnd",
-    "Url": "certificados/BackEnd/FundamentosCSharp.pdf"
+    "Nome": "Projeto Banco de Dados",
+    "Categoria": "Dados",
+    "DataConclusao": "2024-03-12",
+    "Descricao": "Desenvolvimento de projetos práticos de banco de dados com modelagem e implementação completa.",
+    "Url": "certificados/Dados/Projeto Banco de Dados.pdf"
   }
 ]
