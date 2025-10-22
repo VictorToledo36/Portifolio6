@@ -31,8 +31,8 @@ else
             <div class="certificado-card"
                  style="border:1px solid #ddd; border-radius:12px; padding:1.5rem; cursor:pointer; transition:all 0.3s; 
                         background:@GetCorCategoria(cert.Categoria); color:white; box-shadow:0 4px 15px rgba(0,0,0,0.1);
-                        transform:scale(1); hover:transform:scale(1.02);"
-                 @onclick="() => MostrarDetalhes(cert)"
+                        transform:scale(1);"
+                 @onclick="() => MostrarDetalhes(cert)">
 
                 <div style="text-align:center;">
                     <div style="font-size:3rem; margin-bottom:1rem;">
@@ -48,6 +48,7 @@ else
         }
     </div>
 }
+
 @if (CertificadoSelecionado != null)
 {
     <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:flex; justify-content:center; align-items:center; z-index:1000;">
@@ -128,7 +129,6 @@ else
 
     private async Task AbrirPDF(string url)
     {
-        // Abre o PDF em uma nova aba
         await JSRuntime.InvokeVoidAsync("open", url, "_blank");
     }
 
@@ -153,19 +153,6 @@ else
             _ => "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
         };
     }
-
-    private string GetCorCategoria(string? categoria)
-    {
-        return categoria switch
-        {
-            "Web" => "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-            "Dados" => "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-            "BackEnd" => "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-            _ => "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
-        };
-    }
-
-
 
     public class Certificado
     {
