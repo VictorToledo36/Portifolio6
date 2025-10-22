@@ -11,7 +11,7 @@ O site está disponível em: **https://victortoledo36.github.io/Portifolio6/**
 Para fazer o deploy do projeto para o GitHub Pages, execute o script:
 
 ```powershell
-.\deploy-final.ps1
+.\deploy-final-certificados.ps1
 ```
 
 Este script irá:
@@ -39,7 +39,7 @@ dotnet run
 - `Pages/` - Páginas Razor do portfólio
 - `Layout/` - Layout principal da aplicação
 - `wwwroot/` - Arquivos estáticos (CSS, imagens, etc.)
-- `deploy-final.ps1` - Script de deploy para GitHub Pages
+- `deploy-final-certificados.ps1` - Script de deploy para GitHub Pages
 
 ## ⚠️ Importante
 
