@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projetos\\Portifolio\\Portifolio6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C54C1EF-70F5-45A7-B6C1-EFCFAF337B3C}|Portifolio6.csproj|e:\\projetos\\portifolio\\portifolio6\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C54C1EF-70F5-45A7-B6C1-EFCFAF337B3C}|Portifolio6.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C54C1EF-70F5-45A7-B6C1-EFCFAF337B3C}|Portifolio6.csproj|e:\\projetos\\portifolio\\portifolio6\\pages\\habilidades.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C54C1EF-70F5-45A7-B6C1-EFCFAF337B3C}|Portifolio6.csproj|solutionrelative:pages\\habilidades.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "E:\\Projetos\\Portifolio\\Portifolio6\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "E:\\Projetos\\Portifolio\\Portifolio6\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-24T03:54:56.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Habilidades.razor",
+              "DocumentMoniker": "E:\\Projetos\\Portifolio\\Portifolio6\\Pages\\Habilidades.razor",
+              "RelativeDocumentMoniker": "Pages\\Habilidades.razor",
+              "ToolTip": "E:\\Projetos\\Portifolio\\Portifolio6\\Pages\\Habilidades.razor",
+              "RelativeToolTip": "Pages\\Habilidades.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-24T03:10:41.644Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

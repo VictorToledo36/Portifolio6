@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "a8zhRMvX",
+  "version": "a1gSLkxY",
   "assets": [
     {
       "hash": "sha256-/sUnyN87vVDqf6sitLJ1aztfr+KGEHyqeO1ozLUx5kI=",
@@ -62,7 +62,7 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.wasm"
     },
     {
-      "hash": "sha256-ivJIoNyEdSJN1E8OqwR8I8uMP9WQFzVj9Ue7zQPair0=",
+      "hash": "sha256-CcQGcKg1du/HRdbn/xJ8HQl1FbTg3AQV2KhwdhguS/4=",
       "url": "_framework/Portifolio6.wasm"
     },
     {
@@ -134,7 +134,7 @@ self.assetsManifest = {
       "url": "_framework/System.Text.RegularExpressions.wasm"
     },
     {
-      "hash": "sha256-d53aHmvl9v0j9zuDU6D57gXZHB0LU5Sn+Pr0kIIWYh8=",
+      "hash": "sha256-veTWXgzvwBtnV0q/EhnTSjZaIq8/p8HG47tqON3Eil4=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -262,7 +262,7 @@ self.assetsManifest = {
       "url": "img/iconsJenkinsFile.png"
     },
     {
-      "hash": "sha256-7Wc63MSjZzEerMiBLfuZdioNqRPdr1/o/yXW/3EuTs8=",
+      "hash": "sha256-UUFf25rIaJYv7trNQhOg+g9o2U0GX81NxZGu6oG3UB4=",
       "url": "index.html"
     },
     {
