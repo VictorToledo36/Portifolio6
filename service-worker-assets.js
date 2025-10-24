@@ -1,8 +1,8 @@
 self.assetsManifest = {
-  "version": "ygox4J+P",
+  "version": "a8zhRMvX",
   "assets": [
     {
-      "hash": "sha256-01FDPbZDPBB69MaOaK+HpdeJcuHa+YyXsIoD+opU6ik=",
+      "hash": "sha256-/sUnyN87vVDqf6sitLJ1aztfr+KGEHyqeO1ozLUx5kI=",
       "url": "Portifolio6.styles.css"
     },
     {
@@ -62,7 +62,7 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.wasm"
     },
     {
-      "hash": "sha256-A8QYQBJaWlp9MoN27dYTgRsT/nZ5QE+JVozuvvwum1M=",
+      "hash": "sha256-ivJIoNyEdSJN1E8OqwR8I8uMP9WQFzVj9Ue7zQPair0=",
       "url": "_framework/Portifolio6.wasm"
     },
     {
@@ -106,7 +106,7 @@ self.assetsManifest = {
       "url": "_framework/System.Net.Primitives.wasm"
     },
     {
-      "hash": "sha256-9C/J45JWp04TTCeOvRmjGc1hSPJWuUvo3nh2QL3WLg8=",
+      "hash": "sha256-TdhbieEJiJ6ums46JejAehto9d3uEzCe2/23e253+HI=",
       "url": "_framework/System.Private.CoreLib.wasm"
     },
     {
@@ -118,7 +118,7 @@ self.assetsManifest = {
       "url": "_framework/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-X9fed1IIDQpNuJ0hXO/bxc61aP7OUeFqujxoMXD3U0A=",
+      "hash": "sha256-KbGRotCS2kM1UhASzPbn50K4KSCJKQewpghePzNvOQs=",
       "url": "_framework/System.Runtime.wasm"
     },
     {
@@ -134,7 +134,7 @@ self.assetsManifest = {
       "url": "_framework/System.Text.RegularExpressions.wasm"
     },
     {
-      "hash": "sha256-TTlxvnKUkUgmZiKCmF5jOb0IpHi44aF6/rdf+3s6LXs=",
+      "hash": "sha256-d53aHmvl9v0j9zuDU6D57gXZHB0LU5Sn+Pr0kIIWYh8=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -214,7 +214,7 @@ self.assetsManifest = {
       "url": "certificados/Web/Fundamentos do Blazor.pdf"
     },
     {
-      "hash": "sha256-JOZWd9XYwDyrwjSB0PVTcc602GisYED21qQUCSMlGtI=",
+      "hash": "sha256-kwxTvyLnZj1Sa7ugfnYEjGzpp6BHQ9Lqzv3uRJ6sddw=",
       "url": "css/app.css"
     },
     {
@@ -262,7 +262,7 @@ self.assetsManifest = {
       "url": "img/iconsJenkinsFile.png"
     },
     {
-      "hash": "sha256-mOpXErWkVbxSGEyykscBDKxE1LfsevGk25sinygX5FE=",
+      "hash": "sha256-7Wc63MSjZzEerMiBLfuZdioNqRPdr1/o/yXW/3EuTs8=",
       "url": "index.html"
     },
     {
