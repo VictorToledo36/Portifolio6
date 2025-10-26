@@ -1,14 +1,21 @@
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 100vh;
 }
 
 .content {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    border-radius: 12px;
-    margin: 1rem;
+    border-radius: 0;
+    margin: 0;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(123, 44, 191, 0.1);
+    box-shadow: none;
 }
 
 h1:focus {
@@ -76,6 +83,90 @@ h3 {
 
 .btn-filtro.ativo {
     box-shadow: 0 4px 15px rgba(123, 44, 191, 0.4);
+}
+
+/* Sistema de Temas */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #7b2cbf;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(123, 44, 191, 0.2);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.3);
+}
+
+/* Tema Claro (padrão) */
+.tema-claro {
+    background: linear-gradient(135deg, #f8f9ff 0%, #ede7f6 50%, #f3e5f5 100%);
+    min-height: 100vh;
+}
+
+.tema-claro main {
+    background: transparent;
+}
+
+.tema-claro .content {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Tema Escuro */
+.tema-escuro {
+    background: linear-gradient(135deg, #10002b 0%, #240046 30%, #3c096c 70%, #5a189a 100%);
+    min-height: 100vh;
+}
+
+.tema-escuro main {
+    background: transparent;
+}
+
+.tema-escuro .content {
+    background: rgba(16, 0, 43, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(224, 170, 255, 0.1);
+}
+
+.tema-escuro h1, .tema-escuro h2, .tema-escuro h3, .tema-escuro h4, .tema-escuro h5, .tema-escuro h6 {
+    color: #e0aaff;
+}
+
+.tema-escuro p, .tema-escuro span, .tema-escuro div {
+    color: #f3e5f5;
+}
+
+.tema-escuro .info-card, .tema-escuro .resumo-card {
+    background: rgba(16, 0, 43, 0.4);
+    border: 1px solid rgba(224, 170, 255, 0.3);
+}
+
+.tema-escuro .theme-toggle {
+    background: rgba(16, 0, 43, 0.9);
+    border-color: #e0aaff;
+    color: #e0aaff;
+}
+
+.tema-escuro .card {
+    background: rgba(16, 0, 43, 0.3);
+    border: 1px solid rgba(224, 170, 255, 0.2);
+}
+
+.tema-escuro .stat-card {
+    background: rgba(16, 0, 43, 0.4);
+    border: 1px solid rgba(224, 170, 255, 0.3);
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -154,4 +245,66 @@ h3 {
 
 code {
     color: #9d4edd;
+}
+
+/* TEMA ESCURO - MESMO GRADIENTE DA SIDEBAR */
+.tema-escuro {
+    background: linear-gradient(180deg, #240046 0%, #3c096c 100%) !important;
+}
+
+.tema-escuro .page {
+    background: linear-gradient(180deg, #240046 0%, #3c096c 100%) !important;
+}
+
+.tema-escuro main {
+    background: linear-gradient(180deg, #240046 0%, #3c096c 100%) !important;
+    min-height: 100vh;
+}
+
+.tema-escuro .content {
+    background: transparent !important;
+    backdrop-filter: none;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.tema-escuro h1, .tema-escuro h2, .tema-escuro h3, .tema-escuro h4, .tema-escuro h5, .tema-escuro h6 {
+    color: white !important;
+}
+
+.tema-escuro p, .tema-escuro span, .tema-escuro div {
+    color: #f3e5f5 !important;
+}
+
+.tema-escuro .info-card, .tema-escuro .resumo-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.tema-escuro .card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.tema-escuro .theme-toggle {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: white;
+    color: #7b2cbf;
+}
+
+/* Modal das habilidades sempre com texto escuro (fundo branco) */
+.tema-escuro div[style*="background:white"] h3,
+.tema-escuro div[style*="background:white"] p,
+.tema-escuro div[style*="background:white"] span {
+    color: #333 !important;
+}
+
+/* Corrigir cor do nome na sidebar no tema escuro */
+.tema-escuro .navbar-brand {
+    color: white !important;
+}
+
+.tema-escuro .top-row {
+    background-color: transparent !important;
 }

@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "a1gSLkxY",
+  "version": "ESjKkcUZ",
   "assets": [
     {
       "hash": "sha256-/sUnyN87vVDqf6sitLJ1aztfr+KGEHyqeO1ozLUx5kI=",
@@ -62,7 +62,7 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.wasm"
     },
     {
-      "hash": "sha256-CcQGcKg1du/HRdbn/xJ8HQl1FbTg3AQV2KhwdhguS/4=",
+      "hash": "sha256-63V2p8fkw+m0Dp0YOyIRsJTi7XcGC0LnKJAM8fY1e/I=",
       "url": "_framework/Portifolio6.wasm"
     },
     {
@@ -118,7 +118,7 @@ self.assetsManifest = {
       "url": "_framework/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-KbGRotCS2kM1UhASzPbn50K4KSCJKQewpghePzNvOQs=",
+      "hash": "sha256-VtJz6AD0jZjzfb78oCZDkLo/MPGjHfCpC3xK/DvKheU=",
       "url": "_framework/System.Runtime.wasm"
     },
     {
@@ -134,7 +134,7 @@ self.assetsManifest = {
       "url": "_framework/System.Text.RegularExpressions.wasm"
     },
     {
-      "hash": "sha256-veTWXgzvwBtnV0q/EhnTSjZaIq8/p8HG47tqON3Eil4=",
+      "hash": "sha256-kL3zrYX3a40AK3+wCVUfU9yaLeWXw2R/OvEgFyGr5KY=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -214,7 +214,7 @@ self.assetsManifest = {
       "url": "certificados/Web/Fundamentos do Blazor.pdf"
     },
     {
-      "hash": "sha256-kwxTvyLnZj1Sa7ugfnYEjGzpp6BHQ9Lqzv3uRJ6sddw=",
+      "hash": "sha256-jac4TPzE+v2SWyHKzB6Ihjka6LTo/kP09YL24CRo04Y=",
       "url": "css/app.css"
     },
     {
